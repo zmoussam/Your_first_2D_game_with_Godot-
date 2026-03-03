@@ -1,10 +1,10 @@
 [gd_scene format=4 uid="uid://8h8dsuat5e3o"]
 
-[ext_resource type="Script" uid="uid://dh3esilqmkb8w" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://chtdo520ps87q" path="res://mob.tscn" id="2_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://1qdfrag6cyjj" path="res://player.tscn" id="3_lquwl"]
-[ext_resource type="PackedScene" uid="uid://e2281g5kv75o" path="res://hud.tscn" id="4_1bvp3"]
-[ext_resource type="AudioStream" uid="uid://u1clly7pvkrw" path="res://art/gameover.wav" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://dh3esilqmkb8w" path="res://scripts/main.gd" id="1_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://chtdo520ps87q" path="res://scenes/mob.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://1qdfrag6cyjj" path="res://scenes/player.tscn" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://e2281g5kv75o" path="res://scenes/hud.tscn" id="4_tipki"]
+[ext_resource type="AudioStream" uid="uid://u1clly7pvkrw" path="res://art/gameover.wav" id="5_85g3d"]
 
 [sub_resource type="Curve2D" id="Curve2D_7mycd"]
 _data = {
@@ -30,8 +30,8 @@ tags = {
 loop = true
 
 [node name="Main" type="Node" unique_id=419092786]
-script = ExtResource("1_h2yge")
-mob_scene = ExtResource("2_1bvp3")
+script = ExtResource("1_tbgi4")
+mob_scene = ExtResource("2_tefeu")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=603540358]
 anchors_preset = 15
@@ -41,7 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.2649904, 0.51215, 0.99192864, 1)
 
-[node name="Player" parent="." unique_id=1548522758 instance=ExtResource("3_lquwl")]
+[node name="Player" parent="." unique_id=1548522758 instance=ExtResource("3_o6xl0")]
 
 [node name="MobTimer" type="Timer" parent="." unique_id=1386777788]
 wait_time = 0.5
@@ -60,13 +60,13 @@ curve = SubResource("Curve2D_7mycd")
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" unique_id=1475674791]
 
-[node name="HUD" parent="." unique_id=272138097 instance=ExtResource("4_1bvp3")]
+[node name="HUD" parent="." unique_id=272138097 instance=ExtResource("4_tipki")]
 
 [node name="Music" type="AudioStreamPlayer" parent="." unique_id=494552506]
 stream = SubResource("AudioStreamOggVorbis_7mycd")
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="." unique_id=173068949]
-stream = ExtResource("5_lquwl")
+stream = ExtResource("5_85g3d")
 
 [connection signal="hit" from="Player" to="." method="_on_player_hit"]
 [connection signal="hit" from="Player" to="." method="game_over"]
