@@ -58,6 +58,10 @@ cd "Your_first_2D_game_with_Godot-"
 
 Below is a short gameplay recording. Click the link to play or download the file from the repository.
 
+
+https://github.com/user-attachments/assets/62386612-fee5-4c97-a774-80385165261d
+
+
 [Play / Download gameplay.mp4](./media/gameplay.mp4)
 
 ## Project structure (short)
