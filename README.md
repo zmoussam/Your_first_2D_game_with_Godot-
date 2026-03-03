@@ -56,13 +56,10 @@ cd "Your_first_2D_game_with_Godot-"
 
 ## Gameplay video
 
-Below is a short gameplay recording. If your platform supports HTML5 video (for example, GitHub will show a playable video for supported file types), use the player; otherwise click the download link.
+Below is a short gameplay recording. Click the link to play or download the file from the repository.
 
-<video controls width="640">
-  <source src="./media/gameplay.mp4" type="video/mp4">
-  Your browser does not support the video tag. You can download the video here: [gameplay.mp4](./media/gameplay.mp4)
-</video>
- 
+[Play / Download gameplay.mp4](./media/gameplay.mp4)
+
 ## Project structure (short)
 
 - `project.godot` — Godot project file
